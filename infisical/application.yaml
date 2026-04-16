@@ -13,10 +13,10 @@ spec:
     - repoURL: https://dl.cloudsmith.io/public/infisical/helm-charts/helm/charts/
       chart: infisical-standalone
       targetRevision: 1.8.0
-          helm:
-            releaseName: infisical
-            valueFiles:
-            - $values/infisical/values.yaml
+      helm:
+        releaseName: infisical
+        valueFiles:
+        - $values/infisical/values.yaml
     - repoURL: https://github.com/Itsjoses/infrastructure-kube-argocd.git
       targetRevision: main
       ref: values
