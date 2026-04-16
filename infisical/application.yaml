@@ -12,11 +12,13 @@ spec:
     # 1) Helm chart resmi Infisical
     - repoURL: https://dl.cloudsmith.io/public/infisical/helm-charts/helm/charts/
       chart: infisical-standalone
-      targetRevision: 1.7.2
+      targetRevision: 1.8.0
       helm:
-        releaseName: infisical
         valueFiles:
-          - ./values.yaml
+          - values.yaml
+    - repoURL: https://github.com/Itsjoses/infrastructure-kube-argocd.git
+      targetRevision: main
+      ref: values
   syncPolicy:
     automated:
       prune: true
