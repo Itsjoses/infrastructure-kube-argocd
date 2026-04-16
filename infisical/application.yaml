@@ -14,7 +14,7 @@ spec:
       chart: infisical-standalone
       targetRevision: 1.8.0
           helm:
-            releaseName: "infisical"
+            releaseName: infisical
             valueFiles:
             - $values/infisical/values.yaml
     - repoURL: https://github.com/Itsjoses/infrastructure-kube-argocd.git
