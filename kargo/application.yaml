@@ -19,8 +19,8 @@ spec:
             enabled: false
             terminatedUpstream: true
           adminAccount:
-            passwordHash: "asd"
-            tokenSigningKey: "asd"
+            passwordHash: "$2y$10$U1faCN4tbz43RJhvRmdfhOWK4l401GjLIerO/VhS33/h0i.Y.m5Eq"
+            tokenSigningKey: "Raf8bO6e4khCKS9XgoHaEHhd7ZRif2JP"
             tokenTTL: 24h
         controller:
           logLevel: DEBUG
