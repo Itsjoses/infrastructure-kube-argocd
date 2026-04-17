@@ -7,9 +7,24 @@ spec:
   generators:
     - list:
         elements:
-          - name: infisical
-            path: infisical
-            namespace: infisical
+          # - name: infisical
+          #   path: infisical
+          #   namespace: infisical
+          # - name: infisical-operator
+          #   path: infisical-operator
+          #   namespace: infisical
+          # - name: prometheus-grafana
+          #   path: prometheus-grafana
+          #   namespace: monitoring
+          # - name: metallb
+          #   path: metallb
+          #   namespace: metallb-system
+          # - name: cert-manager
+          #   path: cert-manager
+          #   namespace: cert-manager
+          - name: kargo
+            path: kargo
+            namespace: kargo
   template:
     metadata:
       name: '{{name}}'
