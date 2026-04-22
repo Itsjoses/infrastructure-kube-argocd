@@ -22,9 +22,12 @@ spec:
           # - name: cert-manager
           #   path: cert-manager
           #   namespace: cert-manager
-          - name: kargo
-            path: kargo
-            namespace: kargo
+          # - name: kargo
+          #   path: kargo
+          #   namespace: kargo
+          - name: rook-ceph
+            path: rook-ceph
+            namespace: rook-ceph
   template:
     metadata:
       name: '{{name}}'
