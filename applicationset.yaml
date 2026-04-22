@@ -7,27 +7,30 @@ spec:
   generators:
     - list:
         elements:
-          # - name: infisical
-          #   path: infisical
-          #   namespace: infisical
-          # - name: infisical-operator
-          #   path: infisical-operator
-          #   namespace: infisical
-          # - name: prometheus-grafana
-          #   path: prometheus-grafana
-          #   namespace: monitoring
-          # - name: metallb
-          #   path: metallb
-          #   namespace: metallb-system
-          # - name: cert-manager
-          #   path: cert-manager
-          #   namespace: cert-manager
-          # - name: kargo
-          #   path: kargo
-          #   namespace: kargo
+          - name: metallb
+            path: metallb
+            namespace: metallb-system
+          - name: ingress-nginx
+            path: ingress-nginx
+            namespace: ingress-nginx
+          - name: cert-manager
+            path: cert-manager
+            namespace: cert-manager
+          - name: infisical
+            path: infisical
+            namespace: infisical
+          - name: infisical-operator
+            path: infisical-operator
+            namespace: infisical
+          - name: kargo
+            path: kargo
+            namespace: kargo
           - name: rook-ceph
             path: rook-ceph
             namespace: rook-ceph
+          - name: prometheus-grafana
+            path: prometheus-grafana
+            namespace: monitoring
   template:
     metadata:
       name: '{{name}}'

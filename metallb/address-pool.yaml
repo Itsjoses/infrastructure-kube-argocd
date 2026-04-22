@@ -5,7 +5,7 @@ metadata:
   namespace: metallb-system
 spec:
   addresses:
-  - <ipaddress>-<ipaddress>  # Change to your available IP range
+  - 192.168.62.137-192.168.62.137  # Change to your available IP range
 ---
 apiVersion: metallb.io/v1beta1
 kind: L2Advertisement
