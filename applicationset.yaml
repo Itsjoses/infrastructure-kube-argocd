@@ -7,7 +7,7 @@ spec:
   generators:
     - list:
         elements:
-          - name: metallb
+          - name: metallb-release
             path: metallb
             namespace: metallb-system
           - name: ingress-nginx
