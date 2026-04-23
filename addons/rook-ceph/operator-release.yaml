@@ -1,0 +1,38 @@
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: rook-ceph-operator
+  namespace: argocd
+  finalizers:
+  - resources-finalizer.argocd.argoproj.io
+  annotations:
+    argocd.argoproj.io/sync-wave: "1"
+spec:
+  project: default
+  source:
+    chart: rook-ceph
+    repoURL: https://charts.rook.io/release
+    targetRevision: v1.19.4
+    helm:
+      values: |
+        csi:
+          enableLiveness: true
+        monitoring:
+          enabled: true
+        resources:
+          requests:
+            memory: 128Mi # unchangable
+            cpu: 100m # unchangable
+          limits: {}
+        kubeletDirPath: /var/lib/k0s/kubelet
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: rook-ceph
+  syncPolicy:
+    syncOptions:
+    - ServerSideApply=true 
+    - CreateNamespace=true
+    automated:
+      selfHeal: true
+      prune: true
