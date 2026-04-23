@@ -12,7 +12,7 @@ spec:
   source:
     repoURL: https://github.com/Itsjoses/infrastructure-kube-argocd.git
     targetRevision: main
-    path: addons/metallb-config
+    path: addons/metallb-pool
   destination:
     server: https://kubernetes.default.svc
     namespace: metallb-system
