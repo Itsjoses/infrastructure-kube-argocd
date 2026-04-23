@@ -16,7 +16,7 @@ spec:
       helm:
         releaseName: infisical
         valueFiles:
-        - $values/infisical/values.yaml
+        - $values/addons/infisical/values.yaml
     - repoURL: https://github.com/Itsjoses/infrastructure-kube-argocd.git
       targetRevision: main
       ref: values
