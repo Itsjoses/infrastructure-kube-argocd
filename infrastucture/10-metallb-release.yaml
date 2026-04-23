@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: release-infisical-secret-operator
+  name: metallb-release
   namespace: argocd
   finalizers:
     - resources-finalizer.argocd.argoproj.io
@@ -9,13 +9,16 @@ metadata:
     argocd.argoproj.io/sync-wave: "10"
 spec:
   project: default
-  source:
-    chart: secrets-operator
-    repoURL: https://dl.cloudsmith.io/public/infisical/helm-charts/helm/charts/
-    targetRevision: 0.7.1
+  sources:
+    - repoURL: https://metallb.github.io/metallb
+      chart: metallb
+      targetRevision: 0.15.3
+    - repoURL: https://github.com/Itsjoses/infrastructure-kube-argocd.git
+      targetRevision: main
+      ref: values
   destination:
     server: https://kubernetes.default.svc
-    namespace: infisical-system
+    namespace: metallb-system
   syncPolicy:
     syncOptions:
       - CreateNamespace=true
