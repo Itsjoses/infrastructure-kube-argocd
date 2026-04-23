@@ -1,7 +1,7 @@
 infisical:
   image:
     repository: infisical/infisical
-    tag: "v0.159.13" 
+    tag: "v0.159.13" # Check https://hub.docker.com/r/infisical/infisical/tags for latest
     pullPolicy: IfNotPresent
   replicaCount: 2
 

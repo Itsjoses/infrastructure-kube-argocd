@@ -5,7 +5,7 @@ metadata:
   namespace: metallb-system
 spec:
   addresses:
-    - 192.168.62.137-192.168.62.137
+    - 192.168.62.137-192.168.62.137 # ganti IP sesuai dengan yang diinginkan
 ---
 apiVersion: metallb.io/v1beta1
 kind: L2Advertisement

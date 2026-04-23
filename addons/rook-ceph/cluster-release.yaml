@@ -37,15 +37,15 @@ spec:
             useAllNodes: false
             useAllDevices: false
             nodes:
-              - name: worker1
+              - name: worker-1 # ganti nama worker sesuai dengan yang ada di cluster
                 devices:
-                  - name: sdb
-              - name: worker2
+                  - name: sdb # ganti disk yang diinginkan
+              - name: worker-2 # ganti nama worker sesuai dengan yang ada di cluster
                 devices:
-                  - name: sdb
-              - name: worker3
+                  - name: sdb # ganti disk yang diinginkan
+              - name: worker-3 # ganti nama worker sesuai dengan yang ada di cluster
                 devices:
-                  - name: sdb
+                  - name: sdb # ganti disk yang diinginkan
           resources:
             mgr:
               requests:
