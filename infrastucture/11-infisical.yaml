@@ -3,24 +3,19 @@ kind: Application
 metadata:
   name: infisical-standalone
   namespace: argocd
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
   annotations:
     argocd.argoproj.io/sync-wave: "11"
 spec:
   project: default
+  source:
+    repoURL: https://github.com/Itsjoses/infrastructure-kube-argocd.git
+    targetRevision: main
+    path: addons/infisical
   destination:
     server: https://kubernetes.default.svc
     namespace: infisical
-  sources:
-    - repoURL: https://dl.cloudsmith.io/public/infisical/helm-charts/helm/charts/
-      chart: infisical-standalone
-      targetRevision: 1.8.0
-      helm:
-        releaseName: infisical
-        valueFiles:
-          - $values/addons/infisical/values.yaml
-    - repoURL: https://github.com/Itsjoses/infrastructure-kube-argocd.git
-      targetRevision: main
-      ref: values
   syncPolicy:
     automated:
       prune: true
