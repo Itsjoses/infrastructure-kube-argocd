@@ -21,7 +21,7 @@ spec:
             enabled: false
             terminatedUpstream: true
           adminAccount:
-            passwordHash: "$2y$10$U1faCN4tbz43RJhvRmdfhOWK4l401GjLIerO/VhS33/h0i.Y.m5Eq"
+            passwordHash: "$2y$10$nLVDdMFi7Q7afjW4tVAdj.ZJ8MrI3r51/toe2sqW6ZO7ibig7ULlS"
             tokenSigningKey: "Raf8bO6e4khCKS9XgoHaEHhd7ZRif2JP"
             tokenTTL: 24h
         controller:
