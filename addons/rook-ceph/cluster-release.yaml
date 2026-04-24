@@ -34,18 +34,11 @@ spec:
           network:
             provider: host
           storage:
-            useAllNodes: false
-            useAllDevices: false
-            nodes:
-              - name: worker-1 # ganti nama worker sesuai dengan yang ada di cluster
-                devices:
-                  - name: sdb # ganti disk yang diinginkan
-              - name: worker-2 # ganti nama worker sesuai dengan yang ada di cluster
-                devices:
-                  - name: sdb # ganti disk yang diinginkan
-              - name: worker-3 # ganti nama worker sesuai dengan yang ada di cluster
-                devices:
-                  - name: sdb # ganti disk yang diinginkan
+            useAllNodes: true
+            useAllDevices: true
+            deviceFilter: sdb
+            config:
+              osdsPerDevice: "1"
           resources:
             mgr:
               requests:
